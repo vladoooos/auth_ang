@@ -32,6 +32,11 @@
             "styles": [
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styling"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -100,5 +105,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "afe884fe-585b-4aba-9cab-6f718146afbb"
   }
 }
