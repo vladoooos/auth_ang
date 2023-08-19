@@ -1,0 +1,30 @@
+@import "variables";
+
+button {
+  z-index: 3;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 16px 32px;
+  color: $white;
+  font-size: 18px;
+  font-weight: 600;
+
+  &.warning {
+    background: $yellow;
+  }
+
+  &.success {
+    background: $green;
+  }
+
+  &.fail {
+    background: $red;
+  }
+
+  &.message {
+    background: $purple;
+  }
+}

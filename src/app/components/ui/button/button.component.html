@@ -1,0 +1,9 @@
+<button [ngClass]="{
+    warning: type === 'warning',
+    success: type === 'success',
+    fail: type === 'fail',
+    message: type === 'message'
+    }"
+>
+    {{text}}
+</button>

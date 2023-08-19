@@ -1,0 +1,66 @@
+@import "variables";
+
+.wrapper {
+
+  .profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 10px;
+
+    > img {
+      width: 65px;
+      height: 65px;
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+
+      > b {
+        color: $black;
+      }
+    }
+  }
+
+  .message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 26px;
+
+    > span {
+      margin-bottom: 16px;
+      font-size: 18px;
+      font-weight: 500;
+      color: $black;
+    }
+
+    > input {
+      max-width: 617px;
+      padding: 15px 0 16px 14px;
+      border-radius: 5px;
+      background: $white;
+      border: 1px solid $table-stroke;
+      color: $black;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 32px;
+  }
+
+  .wrapper_alert {
+    position: fixed;
+    bottom: calc(100% - 277px);
+    transition: all .6s ease;
+
+    &.show {
+      right: 49px;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import "variables";
+
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 320px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 25px 0px rgba(68, 68, 68, 0.20);
+  padding: 17px 0 15.670000000000002px 11px;
+  color: $grey;
+  text-wrap: balance;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -0.32px;
+
+  &.warning {
+    border-left: 5px solid $yellow;
+
+    path {
+      fill: $yellow;
+    }
+  }
+
+  &.fail {
+    border-left: 5px solid $red;
+
+    path {
+      fill: $red;
+    }
+  }
+
+  &.success {
+    border-left: 5px solid $green;
+
+    path {
+      fill: $green;
+    }
+  }
+
+  .button__close {
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    width: 11px;
+    height: 11px;
+    right: 6px;
+    top: -19px;
+
+    path {
+      fill: $grey;
+    }
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 10.67px;
+  }
+}

@@ -1,0 +1,197 @@
+@import "variables";
+
+.login {
+  display: flex;
+
+  .wrapper_alert {
+    position: fixed;
+    bottom: calc(100% - 278px);
+    right: 49px;
+  }
+
+  .wrapper {
+    display: block;
+    margin: 0 auto;
+
+    .logo {
+      display: block;
+      margin: 0 auto 100px;
+      width: 100px;
+      height: 69px;
+    }
+
+    .main {
+
+      h1 {
+        font-size: 36px;
+        line-height: 56px;
+        letter-spacing: -0.72px;
+      }
+
+      > span {
+        color: $grey;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: -0.32px;
+      }
+    }
+
+    > form {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+
+      > span {
+        color: $black;
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: -0.28px;
+        margin-bottom: 11px;
+      }
+
+      .input {
+        display: flex;
+        flex-direction: column;
+
+        .password {
+
+          &.fail {
+            color: $black;
+          }
+        }
+
+        > input {
+          max-width: 410px;
+          border-radius: 5px;
+          border: 1px solid $table-stroke;
+          padding: 17px 0 19px 24px;
+          background: $white;
+          color: $grey;
+          font-weight: 400;
+          line-height: 100%;
+          letter-spacing: -0.28px;
+          margin-bottom: 24px;
+
+          &:focus {
+            outline: none;
+            color: $black;
+          }
+
+          &.fail {
+            display: block;
+            transition: all .6s ease;
+            border: 1px solid $red;
+            color: $red;
+          }
+
+          &.success {
+            display: block;
+            transition: all .6s ease;
+            border: 1px solid $green;
+            color: $green;
+          }
+        }
+
+        .error_and_success_icon {
+          position: relative;
+          background: transparent;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          width: 20px;
+          height: 20px;
+          bottom: 59px;
+          right: -302px;
+          margin-bottom: -20px;
+        }
+
+        .remove {
+          position: relative;
+          background: transparent;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          width: 20px;
+          height: 20px;
+          bottom: 59px;
+          right: -302px;
+          margin-bottom: -15px;
+        }
+      }
+
+      .error_message {
+        color: $red;
+        height: 15px;
+        margin-top: -17px;
+      }
+
+      .details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 32px;
+
+        .check {
+          display: flex;
+          gap: 11px;
+
+          input[type="checkbox"] {
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+            border-radius: 6px;
+            appearance: none;
+            border: 1px solid $purple;
+
+            &:checked {
+              background: $purple;
+              border: 1px solid $purple;
+            }
+
+            &:checked + svg.check_icon {
+              display: block;
+            }
+          }
+
+          > span {
+            color: $black;
+            line-height: 20px;
+            letter-spacing: -0.28px;
+          }
+
+          svg.check_icon {
+            position: relative;
+            background: transparent;
+            left: -109px;
+            top: 3px;
+            width: 13px;
+            height: 11px;
+            pointer-events: none;
+          }
+        }
+
+        > a {
+          text-decoration: none;
+          color: $purple;
+          font-weight: 500;
+          letter-spacing: -0.28px;
+        }
+      }
+
+      .submit {
+        margin: 0 auto;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        padding: 16px 32px;
+        border-radius: 12px;
+        background: $purple;
+        color: $white;
+        font-size: 18px;
+        font-weight: 600;
+        max-width: 118px;
+      }
+    }
+  }
+}

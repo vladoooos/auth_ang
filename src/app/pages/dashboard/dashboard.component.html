@@ -1,0 +1,59 @@
+<section class="wrapper">
+
+    <div class="profile">
+        <img [alt]="user.userInfo.userName"
+             [src]="user.userInfo.userAvatar"
+        >
+        <div class="details">
+            <b>{{user.userInfo.userName}}</b>
+            <span>ID пользователя: <b>{{user.userInfo.userId}}</b></span>
+        </div>
+    </div>
+
+    <div class="message">
+        <span>Сообщение</span>
+        <input [(ngModel)]="term"
+               placeholder="Введите сообщение..."
+               type="text"
+        >
+    </div>
+
+    <div class="buttons">
+        <app-button (click)="open('fail', 'Сообщение об ошибке')"
+                    text="Ошибка"
+                    type="fail"
+        ></app-button>
+        <app-button (click)="open('warning', 'Пердупредительное сообщение')"
+                    text="Предупреждение"
+                    type="warning"
+        ></app-button>
+        <app-button (click)="open('success', 'Сообщение об успехе')"
+                    text="Успех"
+                    type="success"
+        ></app-button>
+        <app-button (click)="open('warning', term)"
+                    text="Сообщение"
+                    type="message"
+        ></app-button>
+    </div>
+
+
+    <div [ngClass]="{
+        show: true
+        }"
+         class="wrapper_alert"
+    >
+        <app-alert (closeAlert)="alert.visible = false"
+                   *ngFor="let alert of alerts"
+                   [text]="alert.text"
+                   [type]=alert.type
+                   [visible]="alert.visible"
+        ></app-alert>
+    </div>
+
+</section>
+
+
+
+
+
